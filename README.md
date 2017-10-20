@@ -7,9 +7,6 @@ A simple GestruePassword app.Please feel free to use this. (Welcome to Star and 
 
 
 # Demo
-[Download apk](https://github.com/awenzeng/gestrue-password/blob/master/app/app-Awen_release-release.apk?raw=true)
-
-![](https://github.com/awenzeng/gestrue-password/blob/master/resource/camera_demo.gif)
 
 # Download
 You can download the latest version from GitHub's [releases page](https://github.com/awenzeng/gestrue-password/releases).
@@ -47,80 +44,51 @@ Or Maven:
 ```
 For info on using the bleeding edge, see the [Snapshots](https://jitpack.io/#awenzeng/gestrue-password) wiki page.
 
-# ProGuard
-Depending on your ProGuard (DexGuard) config and usage, you may need to include the following lines in your proguard.cfg 
-
-```java
-## app proguard
--keep class com.awen.camera.widget.**{*;}
-
-##Rxjava
--dontwarn javax.annotation.**
--dontwarn javax.inject.**
-# RxJava RxAndroid
--dontwarn sun.misc.**
--keepclassmembers class rx.internal.util.unsafe.*ArrayQueue*Field* {
-    long producerIndex;
-    long consumerIndex;
-}
--keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueProducerNodeRef {
-    rx.internal.util.atomic.LinkedQueueNode producerNode;
-}
--keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueConsumerNodeRef {
-    rx.internal.util.atomic.LinkedQueueNode consumerNode;
-}
-
 ```
-# How do I use Camera?
-Simple use cases with camera's generated API will look something like this:
+# How do I use gestrue-password?
+Simple use cases with gestrue-password's generated API will look something like this:
 
-Init in your application:
-```java
-public class CameraDemoApp extends Application {
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        CameraApplication.init(this,true);
-    }
-}
+in your xml：
+```xml
+        <com.awen.gesturelib.view.GesturePasswordView
+            android:id="@+id/gestureContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gLoginErroTv"
+            app:centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            >
+        </com.awen.gesturelib.view.GesturePasswordView>
 ```
+
+
 In your Activity:
 ```java
-        PermissionsModel permissionsModel = new PermissionsModel(this);
-        permissionsModel.checkCameraPermission(new PermissionsModel.PermissionListener() {
+    public class MainActivity extends AppCompatActivity {
+    
+    @BindView(R.id.gestureContainer)
+    GesturePasswordView gestureContainer;
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+        
+        gestureContainer.setGesturePasswordCallback(new GesturePasswordCallback() {
             @Override
-            public void onPermission(boolean isPermission) {
-                if (isPermission) {
-                    Intent intent = new Intent(MainActivity.this, TakePhotoActivity.class);
-                    startActivityForResult(intent, TakePhotoActivity.REQUEST_CAPTRUE_CODE);
+            public void onGesturePassword(String password) {
+                if(password.length()<6){                  
+                    gestureContainer.clearDrawStatus(1500);
+                }else{              
+                    gestureContainer.clearDrawStatus(0);
                 }
             }
         });
-        
-    
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == RESULT_OK) {
-            switch (requestCode) {
-                case TakePhotoActivity.REQUEST_CAPTRUE_CODE: {
-                    String path = data.getStringExtra(TakePhotoActivity.RESULT_PHOTO_PATH);
-                    showTakePhotoImg.setImageBitmap(BitmapUtil.getBitmap(path));
-                    Log.v(TAG, "图片地址：" + path);
-                    break;
-                }
-            }
-        }
-        super.onActivityResult(requestCode, resultCode, data);
     }
-
+}
 ```
 # Thanks
-[Rxjava](https://github.com/ReactiveX/RxJava)
-
-[RxAndroid](https://github.com/ReactiveX/RxAndroid)
-
-[RxPermissions](https://github.com/tbruyelle/RxPermissions)
 
 # License
 ```java
