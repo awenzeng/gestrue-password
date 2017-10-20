@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mAccountNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_main_black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="56dp"
+        android:textSize="19.1sp"
+        android:text="" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_main_gray"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="9dp"
+        android:textSize="14.6sp"
+        android:text="请输入手势登录密码" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/gLoginErroTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_red"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:textSize="16.9sp"
+            android:text="密码错误，你还可以用3次" />
+
+        <com.awen.gesturelib.view.GesturePasswordView
+            android:id="@+id/gestureContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gLoginErroTv"
+            app:centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            >
+        </com.awen.gesturelib.view.GesturePasswordView>
+
+        <TextView
+            android:id="@+id/gLoginForgetPasswordTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_main"
+            android:layout_marginBottom="18dp"
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="9dp"
+            android:textSize="13.5sp"
+            android:text="忘记手势密码？" />
+    </RelativeLayout>
+
+</LinearLayout>

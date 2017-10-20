@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GesturePasswordView">
+        <attr name="normal_resId" format="reference" />
+        <attr name="click_resId" format="reference" />
+        <attr name="erro_resId" format="reference" />
+        <attr name="line_color" format="color|reference" />
+        <attr name="erro_line_color" format="color|reference" />
+        <attr name="imgWidth" format="dimension" />
+        <attr name="centerHorizontal" format="boolean"></attr>
+        <attr name="marginLeft" format="dimension"></attr>
+    </declare-styleable>
+</resources>
