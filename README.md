@@ -3,7 +3,7 @@
 [![JitPack](https://jitpack.io/v/awenzeng/gestrue-password.svg)](https://jitpack.io/#awenzeng/gestrue-password)
 [![Downloads](https://jitpack.io/v/awenzeng/gestrue-password/month.svg)](https://jitpack.io/#awenzeng/gestrue-password)
 
-A simple GestruePassword app.Please feel free to use this. (Welcome to Star and Fork)
+A simple GestruePassword Lib.Please feel free to use this. (Welcome to Star and Fork)
 
 # Demo
 [Download APK](https://github.com/awenzeng//gestrue-password/blob/master/app/app-release.apk?raw=true)
