@@ -44,7 +44,6 @@ Or Maven:
 ```
 For info on using the bleeding edge, see the [Snapshots](https://jitpack.io/#awenzeng/gestrue-password) wiki page.
 
-```
 # How do I use gestrue-password?
 Simple use cases with gestrue-password's generated API will look something like this:
 
