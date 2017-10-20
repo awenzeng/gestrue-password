@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                     mHandler.sendEmptyMessageDelayed(0, 1500);
                     gestureContainer.clearDrawStatus(1500);
                 }else{
-                    Toast toast = Toast.makeText(MainActivity.this,String.format("恭喜，密码%s输入正确！！！",password),Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(MainActivity.this,"恭喜，密码输入正确！！！",Toast.LENGTH_SHORT);
                     toast.show();
                     gestureContainer.clearDrawStatus(0);
                 }
