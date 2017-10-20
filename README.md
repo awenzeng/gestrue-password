@@ -1,18 +1,18 @@
-# GesturePasswordDemo
+# GesturePassword
 
-[![JitPack](https://jitpack.io/v/awenzeng/CameraDemo.svg)](https://jitpack.io/#awenzeng/CameraDemo)
-[![Downloads](https://jitpack.io/v/awenzeng/CameraDemo/month.svg)](https://jitpack.io/#awenzeng/CameraDemo)
+[![JitPack](https://jitpack.io/v/awenzeng/gestrue-password.svg)](https://jitpack.io/#awenzeng/gestrue-password)
+[![Downloads](https://jitpack.io/v/awenzeng/gestrue-password/month.svg)](https://jitpack.io/#awenzeng/gestrue-password)
 
 A simple GestruePassword app.Please feel free to use this. (Welcome to Star and Fork)
 
 
 # Demo
-[Download apk](https://github.com/awenzeng/CameraDemo/blob/master/app/app-Awen_release-release.apk?raw=true)
+[Download apk](https://github.com/awenzeng/gestrue-password/blob/master/app/app-Awen_release-release.apk?raw=true)
 
-![](https://github.com/awenzeng/CameraDemo/blob/master/resource/camera_demo.gif)
+![](https://github.com/awenzeng/gestrue-password/blob/master/resource/camera_demo.gif)
 
 # Download
-You can download the latest version from GitHub's [releases page](https://github.com/awenzeng/CameraDemo/releases).
+You can download the latest version from GitHub's [releases page](https://github.com/awenzeng/gestrue-password/releases).
 
 Or use Gradle.
 ```java
@@ -25,7 +25,7 @@ Or use Gradle.
   ```
   ```java
   	dependencies {
-	        compile 'com.github.awenzeng:CameraDemo:1.0.1'
+	        compile 'com.github.awenzeng:gestrue-password:1.0.0'
 	}
 
 ```
@@ -41,11 +41,11 @@ Or Maven:
   ```java
   	<dependency>
 	    <groupId>com.github.awenzeng</groupId>
-	    <artifactId>CameraDemo</artifactId>
-	    <version>1.0.1</version>
+	    <artifactId>gestrue-password</artifactId>
+	    <version>1.0.0</version>
 	</dependency>
 ```
-For info on using the bleeding edge, see the [Snapshots](https://jitpack.io/#awenzeng/CameraDemo) wiki page.
+For info on using the bleeding edge, see the [Snapshots](https://jitpack.io/#awenzeng/gestrue-password) wiki page.
 
 # ProGuard
 Depending on your ProGuard (DexGuard) config and usage, you may need to include the following lines in your proguard.cfg 
