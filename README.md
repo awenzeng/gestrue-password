@@ -6,7 +6,7 @@
 A simple GestruePassword app.Please feel free to use this. (Welcome to Star and Fork)
 
 # Demo
-[APK](https://github.com/awenzeng//gestrue-password/blob/master/app/app-release.apk?raw=true)
+[Download APK](https://github.com/awenzeng//gestrue-password/blob/master/app/app-release.apk?raw=true)
 
 ![](https://github.com/awenzeng/gestrue-password/blob/master/resource/gestrue_password_demo.gif)
 
